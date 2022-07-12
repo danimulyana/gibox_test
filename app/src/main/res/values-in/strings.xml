@@ -9,5 +9,7 @@
     <string name="txt_email">Email</string>
     <string name="txt_password">Kata Sandi</string>
     <string name="txt_try_again">Coba Lagi</string>
+    <string name="general_error_message">Terjadi Kesalahan</string>
+    <string name="empty_field_error_message">Kolom ini tidak boleh kosong</string>
 
 </resources>

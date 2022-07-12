@@ -13,4 +13,6 @@
     <string name="txt_password">Password</string>
     <string name="txt_try_again">Try Again</string>
     <string name="paging_user">Paging User</string>
+    <string name="general_error_message">Something went wrong</string>
+    <string name="empty_field_error_message">This field cannot be empty</string>
 </resources>
