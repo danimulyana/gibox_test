@@ -31,8 +31,19 @@ class MainViewModel(private val authUseCase:AuthUseCase):ViewModel() {
     val dataRequestLogin = _dataRequestLogin
     val isLoadingRequestLogin = _isLoadingRequestLogin
 
+
     fun requestLogin(loginRequest:LoginRequest){
-        //TODO : Put here your code
+        viewModelScope.launch {
+            authUseCase.doLogin(loginRequest).collect { resource ->
+                _isLoadingRequestLogin.value = resource is Resource.Loading
+                when (resource) {
+                    is Resource.Success -> _dataRequestLogin.value = resource.data
+                    is Resource.Error -> _isErrorRequestLogin.value = resource.message ?: String()
+                    else -> Unit
+                }
+
+            }
+        }
     }
 
 }
