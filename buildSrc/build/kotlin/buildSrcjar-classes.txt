@@ -1,0 +1,1 @@
+/Users/nDhan/Downloads/TestAndroid-Gibox/buildSrc/build/classes/kotlin/main/Libs.class:/Users/nDhan/Downloads/TestAndroid-Gibox/buildSrc/build/classes/kotlin/main/Versions.class
