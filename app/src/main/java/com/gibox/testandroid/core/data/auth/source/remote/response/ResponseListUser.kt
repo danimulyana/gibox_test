@@ -43,4 +43,7 @@ data class DataItem(
 
 	@field:SerializedName("email")
 	val email: String? = null
-)
+) {
+
+	fun getFullName() = "$firstName $lastName"
+}

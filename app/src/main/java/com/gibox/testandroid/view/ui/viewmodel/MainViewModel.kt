@@ -31,6 +31,9 @@ class MainViewModel(private val authUseCase:AuthUseCase):ViewModel() {
     val dataRequestLogin = _dataRequestLogin
     val isLoadingRequestLogin = _isLoadingRequestLogin
 
+    val userList = authUseCase.getUserList()
+        .cachedIn(viewModelScope)
+
 
     fun requestLogin(loginRequest:LoginRequest){
         viewModelScope.launch {
